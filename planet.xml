@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="osmconvert 0.8.4" timestamp="2017-11-06T02:00:01Z">
+	<bounds minlat="55.723" minlon="37.502" maxlat="55.725" maxlon="37.508"/>
+	<node id="437987986" lat="55.724751" lon="37.5072733" version="1"/>
+	<node id="437987987" lat="55.7246398" lon="37.5071188" version="1"/>
+	<node id="437987988" lat="55.7244513" lon="37.5068699" version="1"/>
+	<node id="437987989" lat="55.7241274" lon="37.5065352" version="1"/>
+	<node id="437987990" lat="55.7239972" lon="37.5064064" version="1"/>
+	<node id="437987991" lat="55.7238712" lon="37.5063206" version="1"/>
+	<node id="437988024" lat="55.724299" lon="37.50693332" version="1"/>
+	<node id="567811847" lat="55.7239806" lon="37.5065179" version="1"/>
+	<node id="567811849" lat="55.7244354" lon="37.5069569" version="1"/>
+	<node id="567811852" lat="55.724859" lon="37.5072851" version="1"/>
+	<node id="567811853" lat="55.7251345" lon="37.5069301" version="1"/>
+	<node id="567811853" lat="55.7252345" lon="37.5068591" version="1"/>
+	<node id="567811853" lat="55.7253345" lon="37.5067301" version="1"/>
+	<node id="567811853" lat="55.7254345" lon="37.5066591" version="1"/>
+	<node id="567811853" lat="55.7255345" lon="37.5065301" version="1"/>
+	<node id="567811853" lat="55.7256345" lon="37.5064591" version="1"/>
+	<node id="567811853" lat="55.7257345" lon="37.5063301" version="1"/>
+	<node id="567811853" lat="55.7258345" lon="37.5062591" version="1"/>
+	<node id="567811853" lat="55.7259345" lon="37.5061301" version="1"/>
+	<node id="567811853" lat="55.72603" lon="37.506016" version="1"/>
+	<way id="37446384" version="1">
+		<nd ref="437988024"/>
+		<tag k="name" v="Бизнес-центр &#34;Минская Плаза&#34;"/>
+		<tag k="building" v="commercial"/>
+		<tag k="addr:street" v="Московская Железная Дорога"/>
+		<tag k="building:levels" v="6"/>
+		<tag k="addr:housenumber" v="1"/>
+	</way>
+	<way id="44772703" version="1">
+		<nd ref="567811842"/>
+		<nd ref="567811839"/>
+	</way>
+	<way id="44772716" version="1">
+		<nd ref="567811839"/>
+		<nd ref="567811847"/>
+		<nd ref="567811849"/>
+		<nd ref="567811853"/>
+	</way>
+	<way id="118029060" version="1">
+		<nd ref="1328395372"/>
+		<nd ref="1328395384"/>
+		<nd ref="1328395354"/>
+		<tag k="barrier" v="fence"/>
+		<tag k="landuse" v="construction"/>
+	</way>
+	<way id="232872676" version="1">
+		<nd ref="567811852"/>
+	</way>
+	<way id="242872619" version="1">
+		<nd ref="437988000"/>
+		<nd ref="437987999"/>
+		<nd ref="437987998"/>
+		<nd ref="437987991"/>
+		<nd ref="437987990"/>
+		<nd ref="437987989"/>
+		<nd ref="437987988"/>
+		<nd ref="437987987"/>
+		<nd ref="437987986"/>
+		<tag k="highway" v="unclassified"/>
+	</way>
+	<way id="503114990" version="1">
+		<nd ref="567811839"/>
+	</way>
+
+</osm>
