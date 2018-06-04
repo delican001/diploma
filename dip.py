@@ -63,3 +63,7 @@ for i in range(len(ways[0])):
 print("###")
 ways = smoothing.go(ways)
 print(ways)
+print("$$$$")
+splines = smoothing.extract(ways)
+
+
