@@ -114,12 +114,7 @@ def get_coeff(values, way, mutate_coeff=0.1, iterations_num=10000):
     unchenged_iterations_num = 0
     best = values[0]
     for j in range(iterations_num):
-        #for i in range(len(values) - 1):
-        #    children = cross(values[i], values[i + 1])
-        #    values.append(children[0])
-        #    values.append(children[1])
         values=opt_pop(values)
-        #values = mutate(values)
         values = smoothing.get_CommonVectors(values)
         values = smoothing.get_projections(values, [smoothing.get_sn(way_points), smoothing.get_sn(way_points)],
                                            smoothing.get_b(way_points))
@@ -133,7 +128,6 @@ def get_coeff(values, way, mutate_coeff=0.1, iterations_num=10000):
         if (unchenged_iterations_num == 1000) & (func(best) < 5):
             print(j)
             break
-        #draw_spline(values[0], smoothing.get_sn(way_points), 0.1, way_points)
     print("values[0]={0}".format(values[0]))
     print(func(values[0]))
     values[0].insert(0, way_points[0])

@@ -56,8 +56,8 @@ def e_func(s, p):
 def get_b(nodes):
     p0x = nodes[0][0]
     p0y = nodes[0][1]
-    pnx = nodes[len(nodes)-1][0]
-    pny = nodes[len(nodes)-1][1]
+    pnx = nodes[len(nodes) - 1][0]
+    pny = nodes[len(nodes) - 1][1]
     return [pnx - p0x, pny - p0y]
 
 
@@ -66,7 +66,7 @@ def get_spline(nodes):
     p0y = nodes[0][1]
     sn = get_sn(nodes)
     points = get_random_points(20000)
-    points = get_projections(points, [sn,sn], get_b(nodes))
+    points = get_projections(points, [sn, sn], get_b(nodes))
     pVectors = get_PVectors(points)
     best_points = genetic.get_coeff(pVectors, nodes, 100)
     return best_points
@@ -124,12 +124,12 @@ def get_sn(way, n=None):
         n = len(way)
     sn = 0
     for i in range(n - 1):
-        sn = sn + get_dist(way[i],way[i+1])
+        sn = sn + get_dist(way[i], way[i + 1])
     return sn
 
 
 def get_dist(pt1, pt2):
-    return math.sqrt((pt2[0]-pt1[0])**2+(pt2[1]-pt1[1])**2)
+    return math.sqrt((pt2[0] - pt1[0]) ** 2 + (pt2[1] - pt1[1]) ** 2)
 
 
 def get_points(points, road, start, stop):
@@ -170,21 +170,23 @@ def extract(points):
     return result
 
 
-def draw_spline(spline, sn, step, pts):
+def draw_spline(spline, sn, step, pts=None):
     s0 = 0
     print(sn)
 
     print(pts)
     while s0 + step <= sn:
         val_x1, val_y1 = get_xy(spline, s0)
+        val_x2, val_y2 = get_xy(spline, s0+step)
         s0 = s0 + step
-        plt.plot(val_x1,val_y1,marker='o')
-    print(get_xy(spline,get_sn(pts)))
-    x=[pt[0] for pt in pts]
-    y=[pt[1] for pt in pts]
-    print(x)
-    print(y)
-    plt.plot(x,y)
+        plt.plot([val_x1,val_x2], [val_y1,val_y2],color="r")
+    #print(get_xy(spline, s0))
+    if pts != None:
+        x = [pt[0] for pt in pts]
+        y = [pt[1] for pt in pts]
+        print(x)
+        print(y)
+        plt.plot(x, y)
     plt.show()
 
 
@@ -194,6 +196,6 @@ def get_xy(spline, s):
     for i in range(len(spline)):
         val_x = val_x + math.pow(s, i) * spline[i][0]
         val_y = val_y + math.pow(s, i) * spline[i][1]
-        #val_y = val_y + 2*spline[0][1]
-    print(val_x,val_y)
+        # val_y = val_y + 2*spline[0][1]
+    print(val_x, val_y)
     return val_x, val_y
